@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+input,
+select,
+textarea {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="button"],
+input[type="submit"],
+label {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+img,
+table,
+input,
+select,
+textarea,
+video,
+iframe,
+canvas {
+  vertical-align: top;
+}
+
+img {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  cursor:pointer;
+}
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #151515;
+
+}
+a:hover {
+  color: #151515;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+i {
+  font-style: normal;
+}
+
+main {
+  display: block;
+}
+
+*:focus {
+  outline: none;
+}
+/*# sourceMappingURL=reset.css.map */

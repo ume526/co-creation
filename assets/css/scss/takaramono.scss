@@ -1,0 +1,1339 @@
+@use "globals/variables" as *;
+
+.container {
+    opacity: 0;
+
+    &.show {
+        opacity: 1;
+        transition: opacity 1.2s;
+        transition-delay: 0.2s;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .header {
+        height: 88px;
+
+        &-nav {
+            background: $cWhite;
+        }
+    }
+
+    .main {
+        padding-top: 88px;
+        height: 598px;
+
+        &__inner {
+            position: relative;
+            max-width: 1160px;
+            margin: 0 auto;
+            z-index: 1;
+
+            &.inview {
+                .main {
+                    &__title {
+                        opacity: 1;
+                    }
+
+                }
+
+                .circle {
+                    opacity: 1;
+
+                    &__item {
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        .circle {
+            opacity: 0;
+            transition: opacity 1.4s .6s, transform 1s .6s cubic-bezier(0, 0.4, 0.3, 1), -webkit-transform 1s .6s cubic-bezier(0, 0.4, 0.3, 1);
+
+            &__item {
+                transform: translateY(30px);
+                transition-duration: 2s;
+                transition-property: opacity, transform;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &__item {
+                position: absolute;
+            }
+        }
+
+        .circle01 {
+            width: 342px;
+            top: 65px;
+            left: -192px;
+            z-index: 3;
+        }
+
+        .circle02 {
+            width: 390px;
+            top: -66px;
+            right: -235px;
+            z-index: 2;
+        }
+
+        .circle03 {
+            width: 99px;
+            height: 99px;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: -95px;
+            left: 28px;
+        }
+
+        .circle04 {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: #FFE987;
+            top: -21px;
+            left: -132px;
+        }
+
+        .circle05 {
+            width: 164px;
+            height: 164px;
+            border-radius: 50%;
+            background: #FFE987;
+            top: 58px;
+            left: 44px;
+            z-index: -1;
+        }
+
+        .circle06 {
+            width: 136px;
+            height: 136px;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: -37px;
+            right: 92px;
+        }
+
+        .circle07 {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: 303px;
+            right: 70px;
+            z-index: 1;
+        }
+
+        .circle08 {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #FFE987;
+            top: 291px;
+            right: -166px;
+        }
+
+        &__title {
+            width: 464px;
+            margin: 67px auto 0;
+            z-index: 1;
+            position: relative;
+            opacity: 0;
+            transition: opacity 1.4s .2s, transform 1s .2s cubic-bezier(0, 0.4, 0.3, 1), -webkit-transform 1s .2s cubic-bezier(0, 0.4, 0.3, 1);
+        }
+
+        &__text {
+            font-family: "Zen Maru Gothic";
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 37.65px;
+            letter-spacing: 0.05em;
+            font-feature-settings: "palt";
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin: 47px 0 0;
+            z-index: 3;
+            position: relative;
+        }
+    }
+
+    .contents {
+        background: #FFE987;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 2626px;
+            height: 739px;
+            position: absolute;
+            left: 50%;
+            margin-left: -1313px;
+            top: -107px;
+            background: url(../img/takaramono/base.svg) no-repeat center top;
+            background-size: contain;
+        }
+
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .heading {}
+
+        .box {
+            padding: 40px 20px 60px;
+            border-radius: 40px;
+            background: $cWhite;
+            margin-bottom: 45px;
+            position: relative;
+            z-index: 1;
+
+            .heading {
+                font-family: "Zen Maru Gothic";
+                font-size: 35px;
+                font-weight: 700;
+                line-height: 50.68px;
+                letter-spacing: 0.05em;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                // padding-top: 95px;
+                position: relative;
+                padding-bottom: 25px;
+                margin-bottom: 38px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 58px;
+                    height: 5px;
+                    background: #23AC39;
+                    border-radius: 3px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: 0 auto;
+                }
+            }
+
+            .text {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 2.32;
+                letter-spacing: 0.05em;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+                .marker {
+                    display: inline-block;
+                    background: #EEEFCE;
+                    border: 3.38px solid #23AC39;
+                    margin: 7px 2px 7px 8px;
+                    padding: 0px 6px;
+                    border-radius: 5px;
+
+                    &.color-orange {
+                        margin: 10px 7px 7px 7px;
+                        padding: 0px 0px 0 5px;
+                        border: 3.38px solid #FABD00;
+                        background: #FFF5D4;
+                    }
+                }
+
+            }
+
+        }
+
+      
+
+        #box02 {
+            padding-bottom: 85px;
+
+            .heading {
+                margin-bottom: 13px;
+
+                // &::before {
+                //     content: '';
+                //     display: block;
+                //     width: 94px;
+                //     height: 66px;
+                //     background: url(../img/takaramono/icon02.svg) no-repeat;
+                //     background-size: contain;
+                //     position: absolute;
+                //     top: 2px;
+                //     left: 0;
+                //     right: 0;
+                //     margin: 0 auto;
+                // }
+            }
+        }
+
+        .movie {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            &__list {
+                max-width: 712px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .thumb {
+                position: absolute;
+                top: 0;
+                cursor: pointer;
+
+                &::before {
+                    transition: all 0.2s;
+                    content: '';
+                    display: block;
+                    width: 56px;
+                    height: 56px;
+                    background: url(../img/takaramono/btn_play.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+
+                &.--large {
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 93px;
+                        height: 93px;
+                        background: url(../img/takaramono/btn_play.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .player1 {
+                max-width: 712px;
+            }
+
+            &.player2,
+            &.player3 {
+                width: 339px;
+                height: 190px;
+                margin-top: 36px;
+            }
+        }
+
+        .map {
+            max-width: 1120px;
+            width: 100%;
+            position: relative;
+            // margin-left: 336px;
+            margin-top: 23px;
+            text-align: center;
+
+            &__image {
+                width: calc(348 / 1120 * 100%);
+                height: auto;
+                display: block;
+                margin: 0 auto;
+
+            }
+
+            &__list {
+                position: absolute;
+                top: 60px;
+                left: 66%;
+                width: calc(348 / 1120 * 100%);
+                height: 100%;
+                transform: translateX(-50%);
+            }
+
+            &__item {
+                position: absolute;
+                transform: translate(-50%, -50%);
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                &.aomori {
+                    // width: 347px;
+                    width: 100%;
+                    // top: 5px;
+                    top: calc(5 / 348 * 100%);
+                    // left: -66px;
+                    left: - calc(66 / 348 * 100%);
+                }
+
+                &.iwate {
+                    // width: 394px;
+                    width: calc(394 / 348 * 100%);
+                    // top: 90px;
+                    // left: 295px;
+                    top: 17.862069%;
+                    left: 90.770115%;
+                }
+
+                &.yamagata {
+                    // width: 462px;
+                    width: calc(462 / 348 * 100%);
+                    // top: 160px;
+                    // left: -246px;
+                    top: 33.103448%;
+                    left: -55.689655%;
+                }
+
+                &.fukushima {
+                    // width: 345px;
+                    width: 100%;
+                    // right: -245px;
+                    // top: 275px;
+                    left: 68.402299%;
+                    top: 54.402299%;
+                }
+
+                &.gunma-nagano {
+                    // width: 383px;
+                    width: 111%;
+                    // left: -257px;
+                    // top: 330px;
+                    left: -72.850575%;
+                    top: 69.850575%;
+                }
+
+                i.arrow {
+                    position: absolute;
+                    left: 0;
+                    bottom: 14px;
+                }
+            }
+
+
+        }
+    }
+
+    .treasure {
+        position: relative;
+
+        .map {
+            &__item {
+                opacity: 0;
+            }
+        }
+
+        &__map {
+            z-index: 10;
+            position: relative;
+            margin: 0 auto;
+            height: 500px;
+            opacity: 0;
+        }
+
+        &__close,
+        &__open {
+            width: 100%;
+        }
+
+        &__open {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &__box {
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    #book {
+        margin: 38px auto 0;
+    }
+
+    .page {
+        background-color: bisque;
+    }
+
+    .p-right {
+        border-left: 0;
+        box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+    }
+
+    .p-left {
+        border-right: 0;
+        box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+    }
+
+    .banner {
+        &__list {
+            width: 666px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        &__item {
+            // width: 216px;
+            // margin-bottom: 10px;
+
+            a {
+                transition: all 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .swiper {
+        width: 907px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+
+        border-radius: 0 0 10px 10px;
+        background: #FFF5D4;
+
+        a {
+            transition: all 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #FED0BC;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #EA5514;
+    }
+
+    .swiper-button-prev {
+        left: 90%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 38.5px;
+        height: 38.5px;
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        background-image: url("data:image/svg+xml,%3Csvg%20width='39'%20height='39'%20viewBox='0%200%2039%2039'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='19.25'%20cy='19.25'%20r='19.25'%20transform='matrix(-1%200%200%201%2038.5%200)'%20fill='%23EA5514'/%3E%3Cpath%20d='M22.931%2026.6899L14.0344%2020.0174L22.931%2013.345'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E");
+
+        &:after {
+            font-size: 0;
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url("data:image/svg+xml,%3Csvg%20width='39'%20height='39'%20viewBox='0%200%2039%2039'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='19.25'%20cy='19.25'%20r='19.25'%20fill='%23EA5514'/%3E%3Cpath%20d='M15.569%2026.6899L24.4656%2020.0174L15.569%2013.345'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E");
+
+        &:after {
+            font-size: 0;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: auto;
+        bottom: 0;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &__body {
+            padding: 20px 13px 30px 17px;
+        }
+
+        &__thumb {
+            aspect-ratio: 285 / 214;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.533;
+            letter-spacing: 0.05em;
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-image: url("data:image/svg+xml,%3Csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='8.655'%20cy='8.655'%20r='8.655'%20fill='%23EA5514'/%3E%3Cpath%20d='M7%2012L11%209L7%206'%20stroke='white'%20stroke-linecap='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+
+        }
+    }
+    #banner_floating {
+        width: 356px;
+        height: 155px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #23AC39;
+        z-index: 1;
+        padding: 10px 0 0;
+        border-radius: 9px;
+        opacity: 0;
+        pointer-events:none;
+    }
+body.is-footer-visible #banner_floating {
+    bottom: 110px;
+    opacity: 1;
+}
+    #banner_floating .ttl {
+        color: #fff;
+        font-weight: 700;
+        font-size: 17.3px;
+        line-height: 25.42px;
+        letter-spacing: 1%;
+        text-align: center;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    #banner_floating .ttl::before {
+        content: '';
+        display: block;
+        width:19px;
+        height: 19px;
+        background: url(../img/takaramono/obj_star.svg) no-repeat;
+        position:absolute;
+        top: 23px;
+        left:18px;
+    }
+    #banner_floating .ttl::after {
+        content: '';
+        display: block;
+        width:19px;
+        height: 19px;
+        background: url(../img/takaramono/obj_star.svg) no-repeat;
+        position:absolute;
+        top: 23px;
+        right:18px;
+    }
+    #banner_floating .ttl span {
+   font-size: 20.95px;
+   line-height: 25.42px;
+    }
+
+    .contents.inview + #banner_floating {
+        transition: opacity .5s ease;
+        opacity: 1;
+        pointer-events: all
+    }
+
+    #banner_floating .a_wrap {
+        display: block;
+        height: 100%
+    }
+
+    #banner_floating .ttl_hide {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+
+    #banner_floating .item {
+        filter: drop-shadow(0.2777777778vw 0.2777777778vw 0.8333333333vw rgba(0, 0, 0, 0.2))
+    }
+
+    #banner_floating .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 335px;
+        margin:0 auto;
+    }
+
+    #banner_floating .btns .btn {
+        width: 164px;
+    }
+
+    #banner_floating .btns .btn img {
+        width: 100%;
+    }
+
+
+
+}
+
+.swiper-navigation-disabled {
+    padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .contents {
+        .inner {
+            width: calc(345 / 390) * 100 + vw;
+            margin: 0 auto;
+        }
+
+        .heading {}
+    }
+
+    .main {
+        height: 168vw;
+        position: relative;
+        z-index: 1;
+
+
+        &__title {
+            width: calc(169 / 390) * 100 + vw;
+            margin: 0 auto calc(19 / 390) * 100 + vw;
+        }
+
+        &__text {
+            font-family: "Zen Maru Gothic";
+            font-size: calc(20 / 390) * 100 + vw;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: .0em;
+            padding-left: 1vw;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        &__inner {
+            margin: 0 auto;
+            padding: 19vw 0 0;
+
+            &.inview {
+                .main {
+                    &__title {
+                        opacity: 1;
+                    }
+
+                }
+
+                .circle {
+                    opacity: 1;
+
+                    &__item {
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        .circle {
+            opacity: 0;
+            transition: opacity 1.4s .6s, transform 1s .6s cubic-bezier(0, 0.4, 0.3, 1), -webkit-transform 1s .6s cubic-bezier(0, 0.4, 0.3, 1);
+
+            img {
+                width: 100%;
+            }
+
+            &__item {
+                position: absolute;
+                transform: translateY(30px);
+                transition-duration: 2s;
+                transition-property: opacity, transform;
+            }
+        }
+
+        .circle01 {
+            width: 39.615385vw;
+            top: 123vw;
+            left: -3.5vw;
+            z-index: 1;
+        }
+
+        .circle02 {
+            width: 43vw;
+            top: calc(417 / 390) * 100 + vw;
+            right: -2vw;
+        }
+
+        .circle03 {
+            z-index: 2;
+            width: calc(111 / 390) * 100 + vw;
+            height: calc(111 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #FFE987;
+            top: -4vw;
+            left: 3vw;
+        }
+
+        .circle04 {
+            width: calc(59 / 390) * 100 + vw;
+            height: calc(59 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: 24vw;
+            left: -4vw;
+            z-index: -1;
+        }
+
+        .circle05 {
+            width: calc(91 / 390) * 100 + vw;
+            height: calc(91 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: 115vw;
+            left: 24vw;
+            z-index: -1;
+        }
+
+        .circle06 {
+            width: calc(80 / 390) * 100 + vw;
+            height: calc(80 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #FFE987;
+            top: 4vw;
+            right: 7vw;
+        }
+
+        .circle07 {
+            width: calc(45 / 390) * 100 + vw;
+            height: calc(45 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #FFE987;
+            top: 136vw;
+            right: 34vw;
+            z-index: 1;
+        }
+
+        .circle08 {
+            width: calc(39 / 390) * 100 + vw;
+            height: calc(39 / 390) * 100 + vw;
+            border-radius: 50%;
+            background: #7BCD88;
+            top: 29vw;
+            right: -2vw;
+            z-index: 1;
+        }
+    }
+
+    .contents {
+        background: #FFE987;
+        position: relative;
+        padding-bottom: calc(60 / 390) * 100 + vw;
+        ;
+
+        &::before {
+            content: '';
+            display: block;
+            width: calc(890 / 390) * 100 + vw;
+            height: calc(217 / 390) * 100 + vw;
+            position: absolute;
+            left: 50%;
+            margin-left: - calc(445 / 390) * 100 + vw;
+            top: -18vw;
+            background: url(../img/takaramono/base_sp.svg) no-repeat center top;
+            background-size: contain;
+        }
+
+        .box {
+            padding: 10.5vw 0 12vw;
+            border-radius: calc(40 / 390) * 100 + vw;
+            background: $cWhite;
+            margin-bottom: 10vw;
+            position: relative;
+            z-index: 1;
+
+            .heading {
+                font-family: "Zen Maru Gothic";
+                font-size: calc(29 / 390) * 100 + vw;
+                font-weight: 700;
+                line-height: calc(40 / 390) * 100 + vw;
+                letter-spacing: 0;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                margin-bottom: 4vw;
+                position: relative;
+                padding-bottom: 6vw;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: calc(58 / 390) * 100 + vw;
+                    height: calc(5 / 390) * 100 + vw;
+                    background: #23AC39;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    border-radius: 3px;
+                }
+            }
+
+            .text {
+                font-size: calc(18 / 390) * 100 + vw;
+                font-weight: 500;
+                line-height: 2;
+                letter-spacing: 0.05em;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+
+                .marker {
+                    display: inline-block;
+                    background: #EEEFCE;
+                    border: calc(4 / 390) * 100 + vw solid #23AC39;
+                    margin: 2vw 1vw 2.5vw 1vw;
+                    padding: 0.5vw 1.5vw;
+                    border-radius: calc(5 / 390) * 100 + vw;
+
+                    &:nth-of-type(3) {
+                        margin-top: 1vw;
+                    }
+
+                    &.color-orange {
+                        margin: 2vw 1vw 1.5vw 1vw;
+                        border: calc(4 / 390) * 100 + vw solid #FDD000;
+                        background: #FFF5D4;
+                    }
+                }
+
+            }
+
+        }
+
+
+        #box02 {
+            padding-bottom: 0;
+            margin-bottom: 13vw;
+            height: 280vw;
+
+            .heading {
+                margin-bottom: 5vw;
+
+                // &::before {
+                //     content: '';
+                //     display: block;
+                //     width: calc(74 / 390) * 100 + vw;
+                //     height: calc(52 / 390) * 100 + vw;
+                //     background: url(../img/takaramono/icon02.svg) no-repeat;
+                //     background-size: contain;
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     right: 0;
+                //     margin: 0 auto;
+                // }
+            }
+
+            .text {
+                line-height: 1.87;
+                margin-bottom: 59vw;
+            }
+        }
+
+        .map {
+            width: calc(280 / 390) * 100 + vw;
+            position: relative;
+            margin-left: 8vw;
+
+            &__item {
+                position: absolute;
+
+                &.aomori {
+                    width: 32.05vw;
+                    top: -57.564103vw;
+                    left: 44vw;
+                    z-index: 100;
+                }
+
+                &.iwate {
+                    width: 57.43vw;
+                    top: -52.564103vw;
+                    left: 8vw;
+                }
+
+                &.yamagata {
+                    width: 47.743vw;
+                    top: -0.564103vw;
+                    left: -4vw;
+                    z-index: 100;
+                }
+
+                &.fukushima {
+                    width: 35.128vw;
+                    right: -3vw;
+                    top: 64.5vw;
+                }
+
+                &.gunma-nagano {
+                    width: 35.3846vw;
+                    left: 2vw;
+                    top: 73.5vw;
+                }
+
+            }
+        }
+
+        .banner {
+                    width: 88.4615384615vw;
+        margin: 0 auto;
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &__item {
+                width: calc(167 / 390) * 100 + vw;
+                margin-bottom: calc(8 / 390) * 100 + vw;
+            }
+        }
+
+    }
+
+    .treasure {
+        .map {
+            &__item {
+                opacity: 0;
+            }
+        }
+
+        &__map {
+            position: relative;
+            z-index: 10;
+            opacity: 0;
+        }
+
+        &__close,
+        &__open {
+            width: 100%;
+        }
+
+        &__open {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &__box {
+            width: 48vw;
+            margin: 0 auto;
+            position: absolute;
+            top: 107vw;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .movie {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 4px;
+        overflow: hidden;
+        position:relative;
+
+        &:not(:last-of-type) {
+            margin-bottom: calc(30 / 390) * 100 + vw;
+        }
+
+        &__list {
+            width: calc(294 / 390) * 100 + vw;
+            margin: calc(30 / 390) * 100 + vw auto 0;
+        }
+
+        .thumb {
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                display: block;
+                width: calc(48 / 390) * 100 + vw;
+                height: calc(48 / 390) * 100 + vw;
+                background: url(../img/takaramono/btn_play.png) no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper {
+        width: calc(285 / 390) * 100 + vw;
+        margin: calc(36 / 390) * 100 + vw auto 0;
+        padding-bottom: calc(74 / 390) * 100 + vw;
+    }
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+
+        border-radius: 0 0 calc(10 / 390) * 100 + vw calc(10 / 390) * 100 + vw;
+        background: #FFF5D4;
+
+
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: calc(10/ 390) * 100 + vw;
+    }
+
+    .swiper-pagination-bullet {
+        width: calc(12/ 390) * 100 + vw;
+        height: calc(12/ 390) * 100 + vw;
+        background: #FED0BC;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #EA5514;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: calc(38/ 390) * 100 + vw;
+        height: calc(38/ 390) * 100 + vw;
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        background-image: url("data:image/svg+xml,%3Csvg%20width='39'%20height='39'%20viewBox='0%200%2039%2039'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='19.25'%20cy='19.25'%20r='19.25'%20transform='matrix(-1%200%200%201%2038.5%200)'%20fill='%23EA5514'/%3E%3Cpath%20d='M22.931%2026.6899L14.0344%2020.0174L22.931%2013.345'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        &:after {
+            font-size: 0;
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url("data:image/svg+xml,%3Csvg%20width='39'%20height='39'%20viewBox='0%200%2039%2039'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='19.25'%20cy='19.25'%20r='19.25'%20fill='%23EA5514'/%3E%3Cpath%20d='M15.569%2026.6899L24.4656%2020.0174L15.569%2013.345'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        &:after {
+            font-size: 0;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: auto;
+        bottom: 0;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &__body {
+            padding: calc(20/ 390) * 100 + vw calc(12/ 390) * 100 + vw calc(26/ 390) * 100 + vw calc(17/ 390) * 100 + vw;
+        }
+
+        &__thumb {
+            aspect-ratio: 285 / 214;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: calc(15/ 390) * 100 + vw;
+            line-height: 1.533;
+            letter-spacing: 0.05em;
+            position: relative;
+            padding-left: calc(20/ 390) * 100 + vw;
+
+            &::before {
+                content: '';
+                display: block;
+                width: calc(17/ 390) * 100 + vw;
+                height: calc(17/ 390) * 100 + vw;
+                background-image: url("data:image/svg+xml,%3Csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle%20cx='8.655'%20cy='8.655'%20r='8.655'%20fill='%23EA5514'/%3E%3Cpath%20d='M7%2012L11%209L7%206'%20stroke='white'%20stroke-linecap='round'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+
+        }
+    }
+
+     #banner_floating {
+        width: 92vw;
+        position: fixed;
+        bottom: 2vw;
+        right: 0;
+        left: 0;
+        margin:0 auto;
+        background: #23AC39;
+        z-index: 1;
+        padding: 2vw 0 1.3vw;
+        border-radius: 2.6vw;
+        opacity: 0;
+        pointer-events: none;
+    }
+    body.is-footer-visible #banner_floating {
+        bottom: 26vw;
+        opacity: 1;
+         z-index: 9999;
+        transition: opacity .5s ease;
+        opacity: 1;
+        pointer-events: all
+    }
+    #banner_floating .ttl {
+        color: #fff;
+        font-weight: 700;
+        font-size: 4.8vw;
+        line-height: 1.5;
+        letter-spacing: 1%;
+        text-align: center;
+        margin-bottom: 1.5vw;
+        position: relative;
+    }
+    #banner_floating .ttl::before {
+        content: '';
+        display: block;
+        width:4.615vw;
+        height: 4.615vw;
+        background: url(../img/takaramono/obj_star.svg) no-repeat;
+        position:absolute;
+        top: 6.9vw;
+        left:7.2vw;
+    }
+    #banner_floating .ttl::after {
+        content: '';
+        display: block;
+        width:4.615vw;
+        height: 4.615vw;
+        background: url(../img/takaramono/obj_star.svg) no-repeat;
+        position:absolute;
+        top: 6.9vw;
+        right:7.2vw;
+    }
+    #banner_floating .ttl span {
+   font-size: 5.8vw;
+    }
+
+    #banner_floating.on {
+        transition: opacity .5s ease;
+        opacity: 1;
+        pointer-events: all
+    }
+
+    #banner_floating .a_wrap {
+        display: block;
+        height: 100%
+    }
+
+    #banner_floating .ttl_hide {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+
+    #banner_floating .item {
+        filter: drop-shadow(0.2777777778vw 0.2777777778vw 0.8333333333vw rgba(0, 0, 0, 0.2))
+    }
+
+    #banner_floating .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 89vw;
+        margin:0 auto;
+    }
+
+    #banner_floating .btns .btn {
+        width: 44vw;
+    }
+
+    #banner_floating .btns .btn img {
+        width: 100%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1166px) {}

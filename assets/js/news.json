@@ -1,0 +1,25 @@
+{
+    "newsData": [
+        {
+            "date": "2024.3.25",
+            "category": "",
+            "area": "",
+            "text": "WEBページ開設しました",
+            "url": ""
+        },
+        {
+            "date": "2024.3.25",
+            "category": "プレスリリース",
+            "area": "",
+            "text": "①タイトルプレスリリース①タイトルプレスリリース①タイトルプレスリリース①タイトル",
+            "url": "/co-creation/assets/pdf/pdf_dummy.pdf"
+        },
+        {
+            "date": "2024.3.25",
+            "category": "プレスリリース",
+            "area": "",
+            "text": "②タイトルプレスリリース②タイトルプレスリリース②タイトルプレスリリース②タイトル",
+            "url": "/co-creation/assets/pdf/pdf_dummy.pdf"
+        }
+    ]
+}
