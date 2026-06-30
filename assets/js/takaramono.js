@@ -36,7 +36,7 @@ function onPlayerReady(event, playerId) {
 	});
 }
 
-const slideCount = document.querySelectorAll('.swiper .swiper-slide').length;
+/* const slideCount = document.querySelectorAll('.swiper .swiper-slide').length;
 
 const isLoop = slideCount > 3;
 const swiper = new Swiper('.swiper', {
@@ -87,4 +87,4 @@ function toggleNavigation(swiper) {
 	} else {
 		swiper.navigation.enable();
 	}
-}
+} */
