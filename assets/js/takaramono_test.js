@@ -1,4 +1,4 @@
-if (typeof gsap !== 'undefined' || typeof ScrollTrigger !== 'undefined') {
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -60,17 +60,26 @@ if (typeof gsap !== 'undefined' || typeof ScrollTrigger !== 'undefined') {
   let autoFlip;
 
   function startAutoFlip() {
+    stopAutoFlip();
     autoFlip = setInterval(() => {
       if (pageFlip.getCurrentPageIndex() < pageFlip.getPageCount() - 2) {
         pageFlip.flipNext();
       } else {
         clearInterval(autoFlip);
+        stopAutoFlip();
       }
     }, 1000);
+  }
+  function stopAutoFlip() {
+    if (autoFlip) {
+      clearInterval(autoFlip);
+      autoFlip = null;
+    }
   }
 
   bookElm.addEventListener('mouseenter', () => {
     clearInterval(autoFlip);
+    stopAutoFlip();
   });
 
   bookElm.addEventListener('mouseleave', () => {
@@ -79,6 +88,7 @@ if (typeof gsap !== 'undefined' || typeof ScrollTrigger !== 'undefined') {
         pageFlip.flipNext();
       }
     }, 1000);
+    stopAutoFlip();
   });
 
   ScrollTrigger.create({
@@ -131,7 +141,7 @@ function onPlayerReady(event, playerId) {
 	});
 }
 
-const slideCount = document.querySelectorAll('.swiper .swiper-slide').length;
+/* const slideCount = document.querySelectorAll('.swiper .swiper-slide').length;
 
 const isLoop = slideCount > 3;
 const swiper = new Swiper('.swiper', {
@@ -182,4 +192,4 @@ function toggleNavigation(swiper) {
 	} else {
 		swiper.navigation.enable();
 	}
-}
+} */

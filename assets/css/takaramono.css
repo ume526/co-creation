@@ -145,6 +145,7 @@
   .contents {
     background: #FFE987;
     position: relative;
+    padding-bottom: 80px;
   }
   .contents::before {
     content: "";
@@ -161,7 +162,7 @@
   .contents .inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px 80px;
+    padding: 0 20px;
   }
   .contents .box {
     padding: 40px 20px 60px;
