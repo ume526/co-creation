@@ -1,4 +1,7 @@
 @media screen and (min-width: 769px) {
+  a {
+    text-decoration: none;
+  }
   .container.show .news {
     opacity: 1;
     -webkit-transform: translateY(0);

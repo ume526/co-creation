@@ -124,6 +124,7 @@ function createPlayer(playerId, videoId, width, height) {
 			loop: 1,
 			rel: 0,
 			playsinline: 1,
+      playlist: videoId
 		},
 		events: {
 			onReady: function (event) {
@@ -165,11 +166,6 @@ const swiper = new Swiper('.swiper', {
 			slidesPerView: 3,
 			spaceBetween: 26,
 		}
-	},
-
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
 	},
 
 	on: {

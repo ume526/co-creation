@@ -1,6 +1,9 @@
 @use "globals/variables" as *;
 
 @media screen and (min-width: 769px) {
+    a {
+        text-decoration: none;
+    }
     .container {
         &.show {
             .news {
